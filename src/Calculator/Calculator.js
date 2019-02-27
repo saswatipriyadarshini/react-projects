@@ -7,6 +7,7 @@ class Calculator extends React.Component {
 
     this.state = {
       slate: '',
+      value: '',
     }
   }
 
@@ -20,7 +21,17 @@ class Calculator extends React.Component {
     })
   }
 
-  onClickHandler(){
+  onClickHandler(e){
+    var value = e.target.value;
+    // var arr = [].concat(this.state.value);
+    // var arr = []
+    // arr.push(value);
+    // var arr1 = arr.join('');
+    // this.setState({
+      // value: arr1
+    // }, () => {
+    //   console.log(this.state.value);
+    // })
 
   }
 
@@ -35,33 +46,33 @@ class Calculator extends React.Component {
             {/* number pad */}
             <div className='number-pad'>
               <div className='numbers'>
-                <button onClick={this.onClickHandler.bind(this)} id='seven'>7</button>
-                <button onClick={this.onClickHandler.bind(this)} id='eight'>8</button>
-                <button onClick={this.onClickHandler.bind(this)} id='nine'>9</button>
+                <button onClick={this.onClickHandler.bind(this)} value='7'>7</button>
+                <button onClick={this.onClickHandler.bind(this)} value='8'>8</button>
+                <button onClick={this.onClickHandler.bind(this)} value='9'>9</button>
               </div>
               <div className='numbers'>
-                <button onClick={this.onClickHandler.bind(this)} id='six'>6</button>
-                <button onClick={this.onClickHandler.bind(this)} id='five'>5</button>
-                <button onClick={this.onClickHandler.bind(this)} id='four'>4</button>
+                <button onClick={this.onClickHandler.bind(this)} value='6'>6</button>
+                <button onClick={this.onClickHandler.bind(this)} value='5'>5</button>
+                <button onClick={this.onClickHandler.bind(this)} value='4'>4</button>
               </div>
               <div className='numbers'>
-                <button onClick={this.onClickHandler.bind(this)} id='three'>3</button>
-                <button onClick={this.onClickHandler.bind(this)} id='two'>2</button>
-                <button onClick={this.onClickHandler.bind(this)} id='one'>1</button>
+                <button onClick={this.onClickHandler.bind(this)} value='3'>3</button>
+                <button onClick={this.onClickHandler.bind(this)} value='2'>2</button>
+                <button onClick={this.onClickHandler.bind(this)} value='1'>1</button>
               </div>
               <div className='numbers'>
-                <button onClick={this.onClickHandler.bind(this)} id='delete'>AC</button>
-                <button onClick={this.onClickHandler.bind(this)} id='zero'>0</button>
-                <button onClick={this.onClickHandler.bind(this)} id='clear'>C</button>
+                <button onClick={this.onClickHandler.bind(this)} value=''>AC</button>
+                <button onClick={this.onClickHandler.bind(this)} value='0'>0</button>
+                <button onClick={this.onClickHandler.bind(this)} value=''>C</button>
               </div>
             </div>
             {/* Operators */}
             <div className='operator'>
-              <button onClick={this.onClickHandler.bind(this)}>/</button>
-              <button onClick={this.onClickHandler.bind(this)}>*</button>
-              <button onClick={this.onClickHandler.bind(this)}>-</button>
-              <button onClick={this.onClickHandler.bind(this)}>+</button>
-              <button onClick={this.onClickHandler.bind(this)}>=</button>
+              <button onClick={this.onClickHandler.bind(this)} value='/'>/</button>
+              <button onClick={this.onClickHandler.bind(this)} value='*'>*</button>
+              <button onClick={this.onClickHandler.bind(this)} value='-'>-</button>
+              <button onClick={this.onClickHandler.bind(this)} value='+'>+</button>
+              <button onClick={this.onClickHandler.bind(this)} value='='>=</button>
             </div>
           </div>
         </div>
